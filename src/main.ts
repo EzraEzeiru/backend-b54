@@ -5,12 +5,12 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     cors: {
-      origin: 'https://vue-frontend.testing.aadeola.com',
+      origin: 'https://b54-frontend-web.vercel.app/#/',
       methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
       preflightContinue: false,
       optionsSuccessStatus: 204,
     },
   });
-  await app.listen(process.env.PORT||3000);
+  await app.listen(process.env.PORT || '0.0.0.0');
 }
 bootstrap();
