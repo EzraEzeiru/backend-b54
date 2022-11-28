@@ -9,8 +9,7 @@ export type UserDocument = User & Document;
 
 @Schema()
 export class User {
-  @Prop({ type: mongoose.Types.ObjectId })
-  _id: string;
+  _id: mongoose.Types.ObjectId;
 
   @Prop()
   fullname: string;
